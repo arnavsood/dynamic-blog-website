@@ -1,0 +1,50 @@
+<% include ./partials/header %>
+<div class= "ui main text container">
+   
+    <div class="ui huge header">Restful Blog App</div>
+    
+    <div class="ui top attached segment">
+        
+        <div class="ui divided items">
+         
+             <%for(var i=0;i<data.length;i++){%>
+           
+           <div class="item">
+               
+                    <div class="image">
+                    <img src="<%=data[i].image%>"> 
+                </div><br>
+                <div class="content"><a class="header" href="/blogs/<%=data[i]._id%>">
+                       <h1><%=data[i].title%></h1></a>
+                 </div>
+                 
+               
+               
+                 <div class ="description">  
+                    <% if(data[i].body && data[i].body.length > 0) { %>
+                     <p><%- data[i].body.substring(0, 100)%></p>
+                    <% } %>
+                </div>
+                 
+               
+                <div class="meta">
+                        <a  href="/blogs/<%=data[i]._id%>"> <button  class ="ui blue inverted button">Read more</button></a>
+                         <form action="/blogs/<%=data[i]._id%>?_method=DELETE" method="POST">
+                    <button class= "ui red basic button">Delete</button>
+                    </form>
+                 </div>
+                    
+                  
+            </div> 
+                 <% } %>  
+        </div>   
+           
+    </div>
+</div>
+
+
+
+    
+    
+    
+<% include ./partials/footer %>

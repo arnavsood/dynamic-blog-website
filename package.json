@@ -1,0 +1,17 @@
+{
+  "name": "restfulblog",
+  "version": "1.0.0",
+  "description": "blog application which shows rest concept",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "arnav sood",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-sanitizer": "^1.0.2",
+    "mongoose": "^4.9.0"
+  }
+}
